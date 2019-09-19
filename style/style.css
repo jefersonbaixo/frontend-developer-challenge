@@ -15,7 +15,6 @@
     font-family: "Helvetica Neue";
     color: #FFFFFF;
 }
-
 .titles{
     margin-top: 69px;
     text-align: center;
@@ -38,7 +37,6 @@
     font: 14px/16px Helvetica Neue;
     letter-spacing: 0;
 }
-
 .header-buttons {
     margin-top: 50px;
     text-align: center;
@@ -54,4 +52,57 @@
     box-shadow: 0px 1px 6px #00000029;
     border: 1px solid #707070;
     border-radius: 4px;
+}
+
+.share-section {
+    text-align: center;
+    margin-bottom: 142.36px;
+    letter-spacing: 0;
+    color: #888888;
+    opacity: 1;
+    font-family: Helvetica Neue;
+}
+.share-section h3 {
+    font-weight: bold;
+    margin-bottom: 44px;
+}
+.share-section p {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 0px;
+}
+.share-inputs {
+    text-align: left;
+    width: 340px;
+    margin: 34px 20px 50px;
+} 
+.share-section input {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+}
+.share-section button {
+    width: 260px;
+    height: 39px;
+    border: 1px solid #707070;
+    border-radius: 4px;
+}
+.share-section label {
+    margin-bottom: 0px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+footer {
+    font: 12px/18px Helvetica Neue;
+    letter-spacing: 0;
+    background: #707070 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+    width: 100%;
+    height: 201px;
+    color: #FFFFFF;
+}
+footer div {
+    text-align: center;
+    margin-top: 64.64px;
 }
