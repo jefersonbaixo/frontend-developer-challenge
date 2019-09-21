@@ -56,9 +56,10 @@
 
 .store {
     width: 70%;
-    margin: 40.67px 15%;
+    margin: 40.67px 15% 164px;
     text-align: center;
     align-content: center;
+    
 }
 
 .store h2 {
@@ -69,12 +70,12 @@
 }
 
 .product {
+    animation: fadein 1s;
     width: 200px;
     margin: 0px 0px 39px;
     font-family: Helvetica Neue;
     color: #888888;
     letter-spacing: 0;
-    opacity: 1;
     text-align: left;
 }
 
@@ -167,6 +168,15 @@
     line-height: 14px;
 }
 
+#nextPage {
+    width: 260px;
+    height: 39px;
+    margin-top: 15px;
+    font: 16px/16px Helvetica Neue;
+    letter-spacing: 0;
+    opacity: 1;
+}
+
 .footer {
 
     background: #707070 0% 0% no-repeat padding-box;
@@ -186,4 +196,9 @@
     letter-spacing: 0;
     color: #FFFFFF;
     line-break: loose;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

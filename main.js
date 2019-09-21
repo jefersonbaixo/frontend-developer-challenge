@@ -1,17 +1,31 @@
-import { getProductsAndNextPage }  from "./modules/apiService.js";
+import { getProducts, getMoreProducts } from "./modules/apiService.js";
 import { createProduct } from "./modules/product.js";
 
 
-let nextPageLink = 'https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1';
+let nextPage;
 
-const store = document.querySelector('.row');
+const store = document.querySelector('.store > div:nth-child(2)');
 
-
-getProductsAndNextPage(nextPageLink).then(
+getProducts().then(
     resp => {
-        nextPageLink = resp.nextPage;
+        nextPage = `https://${resp.nextPage}`;
         resp.products.forEach(value => {
-            store.appendChild(createProduct(value))
+            store.appendChild(createProduct(value));
         })
     }
-)
+).catch(resp => alert(resp));
+
+function moreProducts() {
+    getMoreProducts(nextPage).then(
+        resp => {
+            nextPage = `https://${resp.nextPage}`;
+            resp.products.forEach(value => {
+                store.appendChild(createProduct(value));
+            })
+        }
+    )
+}
+
+
+document.getElementById('nextPage').onclick = () => moreProducts();
+

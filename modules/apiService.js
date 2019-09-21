@@ -1,13 +1,20 @@
 
-function getProductsAndNextPage(url) {
+function getProducts() {
     
-    return fetch(url)
+    return fetch('https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1')
         .then(resp => resp.json())
         .then(json => json);
 
 }
 
-export {getProductsAndNextPage};
+function getMoreProducts(nextPage) {
+    return fetch(nextPage)
+        .then(resp => resp.json())
+        .then(json => json);
+    
+}
+
+export {getProducts, getMoreProducts};
 
 
 
