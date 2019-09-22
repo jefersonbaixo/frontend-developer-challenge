@@ -1,8 +1,12 @@
 
-
+/**
+ * 
+ * @param {object} product 
+ * @function this Function receives an object(product) from API and render it at DOM.
+ */
 function createProduct(product) {
 
-    const id = product.id;
+    const id = product.id; // 
     const name = document.createTextNode(product.name);
     const oldPrice = document.createTextNode(`R$${product.oldPrice.toFixed(2).toString().replace(".", ",")}`);
     const price = document.createTextNode(`R$${product.price.toFixed(2).toString().replace(".", ",")}`);
@@ -12,6 +16,7 @@ function createProduct(product) {
 
     const productImg = document.createElement('img');
     productImg.setAttribute('src', product.image);
+    productImg.setAttribute('alt', `Produto: ${product.id}`)
 
     const productName = document.createElement('h5');
     productName.setAttribute('class', 'productName');
@@ -35,12 +40,10 @@ function createProduct(product) {
 
     const buyButton = document.createElement('button');
     buyButton.setAttribute('class', 'btn btn-outline-secondary')
-    buyButton.setAttribute('onclick', 'console.log("Comprar o produto")');
     buyButton.appendChild(buy);
 
-
     const newProduct = document.createElement('div');
-    newProduct.setAttribute('class', 'product col-3');
+    newProduct.setAttribute('class', 'product');
 
     let elementsArr = new Array();
     elementsArr.push(productImg, productName, productDescription, productOldPrice, productPrice, productInstallments, buyButton);

@@ -3,6 +3,11 @@
     src: url(./fonts/helvetica-neue.ttf)
 }
 
+body {
+    text-align: center;
+    align-content: center;
+}
+
 .header {
     top: 0px;
     left: 0px;
@@ -55,11 +60,9 @@
 }
 
 .store {
-    width: 70%;
-    margin: 40.67px 15% 164px;
+    width: 71.2%;
+    margin: 40.67px auto 164px; 
     text-align: center;
-    align-content: center;
-    
 }
 
 .store h2 {
@@ -72,7 +75,7 @@
 .product {
     animation: fadein 1s;
     width: 200px;
-    margin: 0px 0px 39px;
+    margin: 0px 20px 39px;
     font-family: Helvetica Neue;
     color: #888888;
     letter-spacing: 0;

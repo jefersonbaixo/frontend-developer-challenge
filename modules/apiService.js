@@ -1,20 +1,18 @@
 
-function getProducts() {
+/**
+ * 
+ * @param {URL} page 
+ *@function this function receive a URL and send a GET request to it. 
+ */
+function getProducts(page) {
     
-    return fetch('https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1')
+    return fetch(page)
         .then(resp => resp.json())
         .then(json => json);
 
 }
 
-function getMoreProducts(nextPage) {
-    return fetch(nextPage)
-        .then(resp => resp.json())
-        .then(json => json);
-    
-}
-
-export {getProducts, getMoreProducts};
+export {getProducts};
 
 
 
